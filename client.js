@@ -10,8 +10,8 @@ const options = {
     // username: 'emqx_test',
     // password: 'emqx_test',
 }
-// const url = "ws://95.208.10.86:9001";
-const url = "ws://localhost:9001";
+const url = "ws://95.208.10.86:9001";
+// const url = "ws://localhost:9001";
 // const url = 'ws://broker.emqx.io:8083/mqtt'
 
 const client = mqtt.connect(url, options);
