@@ -22,10 +22,24 @@ client.on("connect", () => {
     client.subscribe("car/speed");
 })
 
-let pubBtn = document.getElementById("publish-btn");
-pubBtn.addEventListener("click", () => {
+let neutralBtn = document.getElementById("publish-N");
+neutralBtn.addEventListener("click", () => {
     // client.publish("car/speed", '{"speed": 54}');
     client.publish("car/gear", '{"gear": "N"}');
+    console.log("Message published");
+})
+
+let driveBtn = document.getElementById("publish-D");
+driveBtn.addEventListener("click", () => {
+    // client.publish("car/speed", '{"speed": 54}');
+    client.publish("car/gear", '{"gear": "D"}');
+    console.log("Message published");
+})
+
+let reverseBtn = document.getElementById("publish-R");
+reverseBtn.addEventListener("click", () => {
+    // client.publish("car/speed", '{"speed": 54}');
+    client.publish("car/gear", '{"gear": "R"}');
     console.log("Message published");
 })
 
