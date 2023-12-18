@@ -8,12 +8,13 @@ const options = {
     // Authentication
     clientId: 'web_client',
     username: 'DL_Client',
-    password: 'litterst17',
+    password: 'litterst17'
 }
 // const url = "ws://95.208.10.86:9001";
-const url = "ws://10.136.2.179:9001";
-// const url = "ws://localhost:9001";
+// const url = "ws://10.136.2.179:9001";
+const url = "mqtt://localhost:9001";
 // const url = 'ws://broker.emqx.io:8083/mqtt'
+console.log(url);
 
 const client = mqtt.connect(url, options);
 
