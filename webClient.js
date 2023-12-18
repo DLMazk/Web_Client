@@ -10,9 +10,9 @@ const options = {
     username: 'DL_Client',
     password: 'litterst17'
 }
-// const url = "ws://95.208.10.86:9001";
+const url = "ws://192.168.178.101:9001";
 // const url = "ws://10.136.2.179:9001";
-const url = "mqtt://localhost:9001";
+// const url = "mqtt://localhost:9001";
 // const url = 'ws://broker.emqx.io:8083/mqtt'
 console.log(url);
 
