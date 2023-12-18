@@ -6,20 +6,25 @@ const data = {
     message: '{"speed":52}'
 };
 
-fetch(apiUrl, {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
-})
-.then(response => {
-    if (response.ok) {
-        console.log('MQTT-Nachricht erfolgreich gesendet');
-    } else {
-        console.error('Fehler beim Senden der MQTT-Nachricht');
-    }
-})
-.catch(error => {
-    console.error('Fehler:', error);
-});
+let sendbtn = document.getElementById("send");
+sendbtn.addEventListener("click", sendingMsg);
+
+function sendingMsg() {
+    fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    })
+        .then(response => {
+            if (response.ok) {
+                console.log('MQTT-Nachricht erfolgreich gesendet');
+            } else {
+                console.error('Fehler beim Senden der MQTT-Nachricht');
+            }
+        })
+        .catch(error => {
+            console.error('Fehler:', error);
+        });
+}
