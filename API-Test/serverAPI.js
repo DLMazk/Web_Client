@@ -18,6 +18,7 @@ app.post('/send-mqtt-message', (req, res) => {
 
         client.on('connect', () => {
             // Nachricht an das gewünschte Thema senden
+            res.send("Connected");
             client.publish(topic, message, (err) => {
                 if (err) {
                     console.error('Fehler beim Senden der MQTT-Nachricht:', err);
