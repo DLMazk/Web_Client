@@ -1,12 +1,14 @@
 import express from 'express';
 import { connect } from 'mqtt';
-import { json } from 'body-parser';
+// import { json } from 'body-parser';
 
 const app = express();
-const mqttBrokerUrl = 'mqtt://192.168.178.101:9001'; // MQTT-Broker-URL
+// const mqttBrokerUrl = 'mqtt://192.168.178.101:9001'; // MQTT-Broker-URL
+const mqttBrokerUrl = 'mqtt://localhost:9001'; // MQTT-Broker-URL
+
 
 // Middleware für den Umgang mit JSON-Daten
-app.use(json());
+app.use(express.json());
 
 // POST-Endpunkt für den Empfang von MQTT-Nachrichten von der HTTPS-Seite
 app.post('/send-mqtt-message', (req, res) => {
@@ -38,7 +40,7 @@ app.post('/send-mqtt-message', (req, res) => {
 });
 
 // Starten Sie den Server auf einem bestimmten Port
-const PORT = 3000;
+const PORT = 3001;
 app.listen(PORT, () => {
     console.log(`Server läuft auf Port ${PORT}`);
 });
