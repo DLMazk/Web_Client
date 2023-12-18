@@ -1,4 +1,4 @@
-const apiUrl = 'https://dlmazk.github.io/Web_Client/API-Test/serverAPI.js';
+const apiUrl = 'https://dlmazk.github.io/Web_Client/API-Test/serverAPI.js/send-mqtt-message';
 
 // Daten für die MQTT-Nachricht
 const data = {
